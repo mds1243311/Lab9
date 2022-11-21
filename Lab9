@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+import java.util.PriorityQueue;
+
+public class Lab9 {
+    /**
+     * TODO *
+     * @param intervals TODO
+     * @return TODO
+     */
+    public static int findMinRooms(int[][] intervals) {
+        PriorityQueue<Integer> q = new PriorityQueue<>();
+        for(int i = 0; i < intervals.length; i++) {
+            for(int j = 0; j < intervals[0].length; j++) {
+                q.add(intervals[j][i]);
+            }
+        }
+        int index = 0;
+
+
+        throw new UnsupportedOperationException("Missing implementation");
+    }
+
+    public static int findLargest(PriorityQueue<Integer> q) {
+        PriorityQueue<Integer> other = q;
+        ArrayList<Integer> arr = new ArrayList<>();
+        for(int i = 0; i < q.size(); i++) {
+            arr.add(i,other.remove());
+        }
+        // have nums
+        int largest = arr.get(0);
+        for(int i = 0; i < arr.size(); i++) {
+            if(largest < arr.get(i)) {
+                largest = arr.get(i);
+            }
+        }
+        return largest;
+    }
+
+    public static int findLargestIndex(PriorityQueue<Integer> q) {
+        PriorityQueue<Integer> other = q;
+        ArrayList<Integer> arr = new ArrayList<>();
+        int index;
+        for(index = 0; index < q.size(); index++) {
+            arr.add(index,other.remove());
+        }
+        // have nums
+        int number = findLargest(q);
+        for(int i = 0; i < q.)
+    }
+
+    public static void main(String[] args) {
+        /*Test your code here*/
+    }
+}
